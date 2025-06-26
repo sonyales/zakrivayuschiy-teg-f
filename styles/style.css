@@ -11,6 +11,203 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main_font-family), 'Luxe Uno Font Family', sans-serif;
+  font-variation-settings: 'wdth' var(--wght-main-font_regular);
+  max-inline-size: clamp(375px, 100%, 700px);
+  padding-block: 100px;
+  color: var(--main-color);
+  font-size: var(--main-text_font-size);
+}
+
+.body_element {
+  border: 2px solid var(--main-color);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  outline: 2px solid var(--main-color);
+  font-family: var(--accent_font-family), 'Press Start Regular', 'Press Start K WhatFontIs.com';
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem);
+  padding-inline: clamp(0.875rem, -6.8038rem + 32.7631vw, 7.53rem);
+  inline-size: 100%;
+  text-align: center;
+  font-family: var(--accent_font-family), 'Press Start Regular', 'Press Start K WhatFontIs.com';
+  text-transform: uppercase;
+  letter-spacing: 0;
+  background-color: var(--section_background-color);
+}
+
+/* мб нужно будет добавить line-height 100%, но пока что это все портит только */
+.header_title {
+  block-size: 100%;
+  font-size: clamp(3.063rem, 1.9092rem + 4.9231vw, 4.063rem);
+}
+
+.header_subtitle {
+  block-size: 100%;
+  font-size: clamp(0.875rem, 0.2254rem + 2.7717vw, 1.438rem);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-block-start: var(--main_padding-block-start);
+}
+
+.card {
+  inline-size: 100%;
+}
+
+.card-title {
+  line-height: 24px; /* по макету 22px*/
+  padding: var(--card-title_padding);
+}
+
+.image-container {
+  position: relative;
+}
+
+.card-image {
+  display: block;
+  inline-size: 100%;
+  /* max-block-size: 696px; */
+}
+
+.image-container_lable {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent_font-family), 'Press Start Regular', 'Press Start K WhatFontIs.com';
+  font-size: 14px;
+  line-height: 100%;
+  text-shadow:
+  -1px 0 #fff, 
+  0 1px #fff, 
+  1px 0 #fff, 
+  0 -1px #fff;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .image-container_lable {
+   -webkit-text-stroke: 1px #fff;
+   text-shadow: none;
+  }
+}
+
+.card_text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: var(--card-text-padding);
+}
+
+.card_text {
+  line-height: 21px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: end;
+  padding: var(--card-text-padding);
+  padding-top: 0;
+  align-items: center;
+}
+
+.card__icon-button {
+  outline: none;
+  justify-self: end;
+  padding: 0;
+}
+
+.like-icon {
+  /* padding-block: var(--card__icon-button_padding-block); */
+  display: block;
+}
+
+.card__like-button {
+  padding: var(--card__like-button_padding);
+  line-height: 90%;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--footer-button_padding);
+  inline-size: 335px;
+}
+
+.floppy {
+  block-size: 21px;
+  inline-size: 21px;
+}
+
+dialog[open] {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+  align-items: center;
+  max-inline-size: 353px;
+  padding: var(--dialog_padding);
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.floppy_dialog {
+  block-size: 39px;
+  inline-size: 39px;
+  grid-column: 1 / 2;
+}
+
+.dialog_text {
+  font-family: var(--accent_font-family), 'Press Start Regular', 'Press Start K WhatFontIs.com';
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  grid-column: 2 / 3;
+}
+
+.close-dialog-button {
+  text-transform: uppercase;
+  padding: var(--card__like-button_padding);
+  grid-column: 1 / 3;
+}
+
+@media (width <= 376px) {
+  dialog[open] {
+    inline-size: 341px;
+  }
+
+  .floppy {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    max-inline-size: 306px;
+  }
 }

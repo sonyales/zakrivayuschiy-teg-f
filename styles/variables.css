@@ -1,1 +1,28 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main_font-family: 'Inter';
+    --accent_font-family: 'PressStart2P';
+    --wght-main-font_regular: 400;
+    --wght-main-font_bold: 700;
+    --section_background-color: #fff;
+    --main-color: #000;
+    --text-stroke-color: #fff;
+    --main_padding-block-start: 100px;
+    --card-title_padding: 3px 10px;
+    --card-text-padding: 25px;
+    --card__icon-button_padding-block: 9px 5px;
+    --card__like-button_padding: 12.5px 37px;
+    --main-text_font-size: 18px;
+    --footer-button_padding: 15px 21px 15px 19px;
+    --dialog_padding: 30px;
+}
+
+@media (width <= 375px) {
+    :root {
+        --main_padding-block: 100px 52px;
+        --card-title_padding: 4px 10px 6px;
+        --card-text-padding: 25px 27px;
+        --card__icon-button_padding-block: 8px 6px;
+        --dialog_padding: 30px 42px;
+    }
+}

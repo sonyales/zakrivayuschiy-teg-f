@@ -9,7 +9,8 @@
 }
 
 body {
-  margin: 0;
+  max-inline-size: 1440px;
+  margin: 0 auto;
 }
 
 h1,
@@ -24,6 +25,7 @@ ol,
 li {
   margin: 0;
   padding: 0;
+  font-size: var(--main-text_font-size);
 }
 
 a {
