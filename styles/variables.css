@@ -25,12 +25,12 @@
     --animation-fill-color: red;
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
     :root {
         --main_padding-block: 100px 52px;
         --card-title_padding: 4px 10px 6px;
         --card-text-padding: 25px 27px;
         --card__icon-button_padding-block: 8px 6px;
-        --dialog_padding: 30px 42px;
+        --dialog_padding: 30px 38px;
     }
 }
