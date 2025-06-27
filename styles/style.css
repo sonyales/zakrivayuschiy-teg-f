@@ -54,12 +54,12 @@
   background-color: var(--text-stroke-color);
   padding-block: var(--card__like-button_padding-block);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 #000;
-  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -69,6 +69,7 @@
   height: 100%;
   background-color: #000;
   transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
   padding: 0;
   inset: 0;
   z-index: 0;
@@ -76,7 +77,6 @@
 
 .button:hover::after {
   transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
 }
 
 .button__text {
